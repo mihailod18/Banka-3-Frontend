@@ -1,0 +1,254 @@
+.bank-funds-page {
+    min-height: 100vh;
+    background: #0f172a;
+    color: #f1f5f9;
+    font-family: 'Inter', sans-serif;
+}
+
+.bank-funds-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 48px 48px 60px;
+}
+
+.bank-funds-card {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 28px;
+    padding: 32px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.bank-funds-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 60%);
+    pointer-events: none;
+}
+
+.bank-funds-header,
+.bank-funds-summary,
+.bank-funds-table-wrap,
+.bank-funds-count,
+.bank-funds-error {
+    position: relative;
+    z-index: 1;
+}
+
+.bank-funds-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+.bank-funds-eyebrow {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: #60a5fa;
+}
+
+.bank-funds-title {
+    margin: 6px 0 8px;
+    font-size: 34px;
+    line-height: 1.1;
+    color: #f8fafc;
+}
+
+.bank-funds-subtitle {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.bank-funds-refresh-btn {
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(96, 165, 250, 0.45);
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.bank-funds-refresh-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.bank-funds-refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.bank-funds-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.bank-funds-summary-item {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 16px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bank-funds-summary-label {
+    color: #94a3b8;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.bank-funds-summary-value,
+.bank-funds-profit,
+.bank-funds-loss {
+    font-size: 18px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.bank-funds-summary-value {
+    color: #f8fafc;
+}
+
+.bank-funds-profit {
+    color: #86efac;
+}
+
+.bank-funds-loss {
+    color: #fda4af;
+}
+
+.bank-funds-table-wrap {
+    background: rgba(17, 24, 39, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    border-radius: 18px;
+    overflow-x: auto;
+}
+
+.bank-funds-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.bank-funds-table th {
+    text-align: left;
+    padding: 16px 14px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.bank-funds-table td {
+    padding: 18px 14px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    color: #e2e8f0;
+    vertical-align: middle;
+}
+
+.bank-funds-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.bank-funds-table tbody tr:hover {
+    background: rgba(30, 41, 59, 0.45);
+}
+
+.bank-funds-name {
+    color: #f8fafc;
+    font-weight: 700;
+}
+
+.bank-funds-muted {
+    color: #94a3b8;
+}
+
+.bank-funds-percent {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, 0.12);
+    color: #93c5fd;
+    font-weight: 700;
+}
+
+.bank-funds-amount {
+    color: #f8fafc;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.bank-funds-empty {
+    text-align: center;
+    padding: 42px 16px !important;
+    color: #94a3b8 !important;
+}
+
+.bank-funds-error {
+    background: rgba(248, 113, 113, 0.12);
+    border: 1px solid rgba(248, 113, 113, 0.4);
+    color: #fecaca;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.bank-funds-count {
+    padding: 12px 4px 0;
+    color: #64748b;
+    font-size: 13px;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    .bank-funds-header {
+        flex-direction: column;
+    }
+
+    .bank-funds-refresh-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .bank-funds-wrapper {
+        padding: 28px 20px 48px;
+    }
+
+    .bank-funds-card {
+        padding: 22px 18px;
+        border-radius: 22px;
+    }
+
+    .bank-funds-title {
+        font-size: 28px;
+    }
+
+    .bank-funds-subtitle {
+        font-size: 14px;
+    }
+}

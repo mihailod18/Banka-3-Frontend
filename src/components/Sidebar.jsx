@@ -142,6 +142,7 @@ export default function MenuDropdown() {
                         { label: "Pregled naloga", path: "/orders/review" },
                         { label: "Upravljanje aktuarima", path: "/actuary-management" },
                         { label: "Porez tracking", path: "/tax" },
+                        { label: "Pozicije u fondovima", path: "/profit-bank/fund-positions" },
                         { label: "Berze", path: "/berza" },
                     ],
                 });
